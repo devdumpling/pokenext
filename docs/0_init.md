@@ -145,4 +145,28 @@ And that renders...
 }
 ```
 
-Sick!
+Sick! Also we can note that we're caching the result of the query in the Next Data Cache by default here through apollo client nextjs.
+
+> Very important to remember that in Next 15, request caching is not turned on by default through fetch. I imagine Apollo will follow suit with this in the future.
+
+We can confirm this by turning the `fetchOptions` to `cache: no-store` and see if we get uncached requests.
+
+Actually, interestingly looks like we do have to enable `force-cache` directly in our apollo client to get caching up. Cool, good to know.
+
+We'll hold off on adding any form of client querying yet. For now this should get us started.
+
+Okay, so we have the ability to fetch data. Now what?
+
+## A basic two column pokedex
+
+When I think of a pokedex, I think of something like this
+
+![pokedex basic](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ED6_Znmj_4X_C1K0SDP3L3DU2A30DbbR5jSmhg0WGpBsu4_wfX7uw-gCVxWnhLL-FI&usqp=CAU)
+
+and then clicking on one might take you to a fuller screen like this
+
+![pokedex more](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV6ouxCTDckNSJfv2-_uVzo3YQ82tNl-uUKz8CYOkQx13HWp1iyCR-0ButnNYhdcOnT9c&usqp=CAU)
+
+Let's build the first view first. Going to start a new file for this. 
+
+

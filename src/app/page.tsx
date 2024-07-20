@@ -34,6 +34,6 @@ const GET_POKEMONS = gql`
 `;
 
 const gqlVariables = {
-  limit: 2,
+  limit: 3,
   offset: 1,
 };
