@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 
 export default async function Home() {
   const testQuery = {
-    query: GET_POKEMONS,
+    query: QueryHomepage,
     variables: gqlVariables,
   };
 
@@ -16,8 +16,11 @@ export default async function Home() {
   );
 }
 
-const GET_POKEMONS = gql`
-  query pokemons($limit: Int, $offset: Int) {
+/**
+ * We start wide with a single query and will build fragments
+ */
+const QueryHomepage = gql`
+  query homepageQuery($limit: Int, $offset: Int) {
     pokemons(limit: $limit, offset: $offset) {
       count
       next
@@ -25,6 +28,7 @@ const GET_POKEMONS = gql`
       status
       message
       results {
+        id
         url
         name
         image
@@ -34,6 +38,6 @@ const GET_POKEMONS = gql`
 `;
 
 const gqlVariables = {
-  limit: 3,
-  offset: 1,
+  limit: 10,
+  offset: 0,
 };
