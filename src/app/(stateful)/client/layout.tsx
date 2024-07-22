@@ -8,9 +8,7 @@ export default function StatefulClientLayout({
 }>) {
   return (
     <PokedexClientProvider>
-      <ApolloWrapper>
-        <>{children}</>
-      </ApolloWrapper>
+      <ApolloWrapper>{children}</ApolloWrapper>
     </PokedexClientProvider>
   );
 }

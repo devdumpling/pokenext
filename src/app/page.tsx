@@ -1,9 +1,15 @@
 import { PokemonCard } from "@/components/PokemonCard/PokemonCard";
 import { PokemonList } from "@/components/PokemonList/PokemonList";
 import { PokemonListSkeleton, PokemonSkeleton } from "@/components/skeles";
+
 import { Suspense } from "react";
 
-export default async function Home({ params, searchParams }: any) {
+export const experimental_ppr = true;
+
+export default async function PokedexBasicHomepage({
+  params,
+  searchParams,
+}: any) {
   const selectedPokemon = searchParams.selected ?? "bulbasaur";
   return (
     <main>

@@ -8,7 +8,9 @@ type PokemonPageProps = {
   };
 };
 
-export default async function PokelistPage({ params }: PokemonPageProps) {
+export default async function ParallelPokemonCardPage({
+  params,
+}: PokemonPageProps) {
   const selectedPokemon = params.pokemon ?? "bulbasaur";
   return (
     <Suspense fallback={<LoadingPokemonSkeleton />}>

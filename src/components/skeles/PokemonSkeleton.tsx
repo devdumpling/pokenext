@@ -4,12 +4,9 @@ export const PokemonSkeleton = () => {
       <div className="animate-pulse">
         <div className="animate-pulse bg-slate-300 dark:bg-slate-700 h-10 w-48 mb-2 rounded"></div>
         <div className="animate pulse flex items-center gap-2">
-          {[...Array(3)].map((_, idx) => (
-            <div
-              key={idx}
-              className="animate-pulse px-2 py-1 bg-slate-300 dark:bg-slate-700 rounded-full h-6 w-12"
-            ></div>
-          ))}
+          <div className="animate-pulse px-2 py-1 bg-slate-300 dark:bg-slate-700 rounded-full h-6 w-12"></div>
+          <div className="animate-pulse px-2 py-1 bg-slate-300 dark:bg-slate-700 rounded-full h-6 w-12"></div>
+          <div className="animate-pulse px-2 py-1 bg-slate-300 dark:bg-slate-700 rounded-full h-6 w-12"></div>
         </div>
       </div>
       <div className="animate-pulse bg-slate-300 dark:bg-slate-700 rounded-full h-64 w-64"></div>

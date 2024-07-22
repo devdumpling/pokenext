@@ -3,7 +3,7 @@ import { graphql } from "@/gql";
 import Image from "next/image";
 
 const PokemonQueryDocument = graphql(`
-  query PokemonQuery($name: String!) {
+  query BasePokemonQuery($name: String!) {
     pokemon(name: $name) {
       id
       name
