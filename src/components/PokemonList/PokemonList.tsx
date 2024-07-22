@@ -20,12 +20,14 @@ const PokemonListQueryDocument = graphql(`
   }
 `);
 
-const pokemonListQueryVariables = {
-  limit: 10,
-  offset: 0,
+export type PokemonListProps = {
+  limit?: number;
+  offset?: number;
 };
 
-export const PokemonList = async () => {
+export const PokemonList = async ({ limit, offset }: PokemonListProps) => {
+  const pokemonListQueryVariables = { limit, offset };
+
   const pokemonListQuery = {
     query: PokemonListQueryDocument,
     variables: pokemonListQueryVariables,
