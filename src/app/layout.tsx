@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { Inter, Pixelify_Sans } from "next/font/google";
 
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Pokenext",
@@ -29,10 +30,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${pixel.variable} dark:bg-stone-800 dark:text-amber-300`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${pixel.variable} antialiased dark:bg-stone-800 dark:text-amber-300`}
+    >
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,43 +1,13 @@
-import { query } from "@/lib/data/apollo/server";
-import { gql } from "@apollo/client";
+import { PokemonCard } from "@/components/PokemonCard/PokemonCard";
+import { PokemonList } from "@/components/PokemonList/PokemonList";
 
-export default async function Home() {
-  const testQuery = {
-    query: QueryHomepage,
-    variables: gqlVariables,
-  };
-
-  const { data } = await query(testQuery);
-
+export default async function Home({ params, searchParams }: any) {
   return (
     <main>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto p-4">
+        <PokemonCard name={searchParams.selected} />
+        <PokemonList />
+      </section>
     </main>
   );
 }
-
-/**
- * We start wide with a single query and will build fragments
- */
-const QueryHomepage = gql`
-  query homepageQuery($limit: Int, $offset: Int) {
-    pokemons(limit: $limit, offset: $offset) {
-      count
-      next
-      previous
-      status
-      message
-      results {
-        id
-        url
-        name
-        image
-      }
-    }
-  }
-`;
-
-const gqlVariables = {
-  limit: 10,
-  offset: 0,
-};
