@@ -2,7 +2,7 @@ const GH_URL = "https://github.com/devdumpling/pokenext";
 
 export const Footer = () => {
   return (
-    <footer className="bg-stone-900">
+    <footer className="dark:bg-stone-900 bg-stone-100">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="md:flex md:justify-between">
           <div className="md:flex md:items-center md:justify-between">
@@ -11,7 +11,7 @@ export const Footer = () => {
                 href={GH_URL}
                 className="text-amber-500 hover:text-amber-400 font-pixel"
               >
-                poke-next - made with ❤️ by @devdumpling
+                made with ❤️ by @devdumpling
               </a>
             </div>
           </div>

@@ -24,8 +24,8 @@ export const PokemonListItem = (props: {
   }
 
   return (
-    <li className="relative items-center gap-8">
-      <span className="font-pixel absolute right-0 top-0 text-md text-amber-500">{formatId(pokemon.id)}</span>
+    <li className="relative pl-2 items-center">
+      <span className="font-pixel opacity-50 absolute right-0 top-0 text-md text-amber-500">{formatId(pokemon.id)}</span>
       <Link
         href={{
           query: {
