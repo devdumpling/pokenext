@@ -21,7 +21,7 @@ export const PokemonList = async ({ limit, offset }: PokemonListProps) => {
     <div className="m-4">
       <ul>
         {results.map((pokemon) => (
-          <PokemonListItem key={pokemon.id} name={pokemon.name} />
+          <PokemonListItem key={pokemon.name} name={pokemon.name} />
         ))}
       </ul>
     </div>

@@ -6,7 +6,7 @@ import { PokemonListItemButton } from "./PokemonListItemButton.client";
 export const PokemonListItemFragment = graphql(
   /* GraphQL */
   `
-    fragment PokemonItem on PokemonItem {
+    fragment ClientPokemonItem on PokemonItem {
       id
       name
     }

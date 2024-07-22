@@ -3,7 +3,10 @@ import { PokemonList } from "@/components/restful/PokemonList/PokemonList.restfu
 import { PokemonListSkeleton, PokemonSkeleton } from "@/components/skeles";
 import { Suspense } from "react";
 
-export default async function PokedexRestHomepage({ params, searchParams }) {
+export default async function PokedexRestHomepage({
+  params,
+  searchParams,
+}: any) {
   const selectedPokemon = searchParams.selected ?? "bulbasaur";
   return (
     <main>

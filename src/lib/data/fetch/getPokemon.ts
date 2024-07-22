@@ -4,7 +4,7 @@ import { REST_API_BASE_URL } from "@/lib/constants";
 export async function getPokemon(id: string | number) {
   const url = `${REST_API_BASE_URL}/pokemon/${id}`;
 
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "force-cache" });
   const json = await response.json();
   return json;
 }

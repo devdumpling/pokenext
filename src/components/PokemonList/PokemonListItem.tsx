@@ -6,7 +6,7 @@ import { FragmentType, useFragment } from "@/gql/fragment-masking";
 export const PokemonListItemFragment = graphql(
   /* GraphQL */
   `
-    fragment PokemonItem on PokemonItem {
+    fragment BasePokemonListItem_pokemonItem on PokemonItem {
       id
       name
     }

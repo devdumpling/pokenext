@@ -4,8 +4,6 @@ import { PokemonListSkeleton, PokemonSkeleton } from "@/components/skeles";
 
 import { Suspense } from "react";
 
-export const experimental_ppr = true;
-
 export default async function PokedexBasicHomepage({
   params,
   searchParams,

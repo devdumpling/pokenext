@@ -5,7 +5,7 @@ import { PokemonListItem } from "./PokemonListItem";
 import { isNotNullOrUndefined } from "@/gql/typeguards";
 
 const PokemonListQueryDocument = graphql(`
-  query PokemonListQuery($limit: Int, $offset: Int) {
+  query BasePokemonListQuery($limit: Int, $offset: Int) {
     pokemons(limit: $limit, offset: $offset) {
       count
       next
@@ -14,7 +14,7 @@ const PokemonListQueryDocument = graphql(`
       message
       results {
         id
-        ...PokemonItem
+        ...BasePokemonListItem_pokemonItem
       }
     }
   }
