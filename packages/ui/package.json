@@ -1,17 +1,9 @@
 {
-  "name": "pokenext-examples",
+  "name": "@pokenext/ui",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev:basic": "pnpm --filter pokenext dev",
-    "dev:rest": "pnpm --filter pokenext-rest dev",
-    "dev:parallel": "pnpm --filter pokenext-parallel dev",
-    "build:basic": "pnpm --filter pokenext build",
-    "build:rest": "pnpm --filter pokenext-rest build",
-    "build:parallel": "pnpm --filter pokenext-parallel build",
-    "start:basic": "pnpm --filter pokenext start",
-    "start:rest": "pnpm --filter pokenext-rest start",
-    "start:parallel": "pnpm --filter pokenext-parallel start"
+  "exports": {
+    ".": "./src/index.ts"
   },
   "devDependencies": {
     "@apollo/client": "^3.10.8",
@@ -33,5 +25,15 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@apollo/client": "^3.10.8",
+    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "graphql": "^16.9.0",
+    "next": "15.0.0-canary.74",
+    "react": "19.0.0-rc.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "react-dom": "19.0.0-rc.0"
   }
 }
