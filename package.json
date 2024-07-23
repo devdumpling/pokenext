@@ -5,10 +5,13 @@
   "scripts": {
     "dev:basic": "pnpm --filter pokenext dev",
     "dev:rest": "pnpm --filter pokenext-rest dev",
+    "dev:parallel": "pnpm --filter pokenext-parallel dev",
     "build:basic": "pnpm --filter pokenext build",
     "build:rest": "pnpm --filter pokenext-rest build",
+    "build:parallel": "pnpm --filter pokenext-parallel build",
     "start:basic": "pnpm --filter pokenext start",
-    "start:rest": "pnpm --filter pokenext-rest start"
+    "start:rest": "pnpm --filter pokenext-rest start",
+    "start:parallel": "pnpm --filter pokenext-parallel start"
   },
   "devDependencies": {
     "@apollo/client": "^3.10.8",
