@@ -1,0 +1,37 @@
+{
+  "name": "pokenext-parallel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pokenext/lib": "workspace:*",
+    "@pokenext/ui": "workspace:*",
+    "@apollo/client": "^3.10.8",
+    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "graphql": "^16.9.0",
+    "next": "15.0.0-canary.74",
+    "react": "19.0.0-rc.0",
+    "react-dom": "19.0.0-rc.0"
+  },
+  "devDependencies": {
+    "@0no-co/graphqlsp": "^1.12.12",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.2",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@parcel/watcher": "^2.4.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.0-canary.74",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

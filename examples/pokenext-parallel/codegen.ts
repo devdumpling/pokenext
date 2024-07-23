@@ -1,6 +1,7 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
+import { POKE_GRAPH_API_URL } from "@pokenext/lib/constants";
 
-const API_URL = "https://graphql-pokeapi.graphcdn.app";
+const API_URL = POKE_GRAPH_API_URL;
 
 const config: CodegenConfig = {
   schema: API_URL,
