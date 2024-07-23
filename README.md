@@ -158,6 +158,8 @@ export const PokemonListItem = (props: {
 }) => { ... }
 ```
 
+**❗❗ Notice that we get to start deep in our query here, instead of having to repeat the entire tree (which we would have to do without fragments)**
+
 Then we simply spread our fragment on the parent query...
 
 ```tsx
@@ -180,4 +182,6 @@ Now we've explicitly defined the data requirements of this component. Better, we
 
 This pattern, while simple on paper, enables a lot of flexibility and underscores the composability of our components, effectively turning them into little data-component building blocks.
 
-For more info, check out the `examples/pokenext` or `examples/pokenext-parallel`. 
+Working in this way also helps to highlight where your graph may be deficient, as it makes it obvious where a component is bending over backward to get data in awkward ways.
+
+For more info, check out the `examples/pokenext` or `examples/pokenext-parallel`.
