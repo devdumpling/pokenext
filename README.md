@@ -1,6 +1,6 @@
 # pokenext
 
-`PokeNext` is a simple educational project aimed to highlight the advantages and challenges of data-fetching in a Next.js (app router) + GraphQL environment.
+`PokeNext` is a simple educational/POC project aimed to highlight the advantages and challenges of data-fetching in a Next.js (app router) + GraphQL environment.
 
 In order to do this, I've built three versions of the same app:
 
